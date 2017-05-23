@@ -1,0 +1,11 @@
+{"namespace": "pl.cloudtechnologie.itf.avro",
+ "type": "record",
+ "name": "AvroBidRequestNotification",
+ "fields": [
+     {"name": "user_id",  "type": ["long"]},
+     {"name": "host_hash", "type": ["long"]},
+     {"name": "user_agent",  "type": ["int"]},
+     {"name": "ip_address", "type": ["int"]},
+     {"name": "timestamp",  "type": ["long"]}
+ ]
+}
