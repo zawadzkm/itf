@@ -9,6 +9,7 @@ import pl.cloudtechnologie.itf.avro.AvroBidRequestNotificationSerializer;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationDeserializer;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationGenerator;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationSerializer;
+import pl.cloudtechnologie.itf.proto.CtProtos;
 import pl.cloudtechnologie.itf.thrift.ThriftBidRequestNotification;
 import pl.cloudtechnologie.itf.thrift.ThriftBidRequestNotificationDeserializer;
 import pl.cloudtechnologie.itf.thrift.ThriftBidRequestNotificationGenerator;

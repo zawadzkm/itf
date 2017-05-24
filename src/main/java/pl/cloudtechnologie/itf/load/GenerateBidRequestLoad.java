@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class GenerateBidRequestLoad {
 
-    static int WORKERS_NO = 10;
-    static  int WORKER_MESSAGES = 100000;
+    static int WORKERS_NO = 5;
+    static  int WORKER_TIME = 10*1000;
 
     public static void main(String[] args) {
         GenerateBidRequestLoad t = new GenerateBidRequestLoad();
@@ -14,27 +14,26 @@ public class GenerateBidRequestLoad {
 
     public void run() {
 
-        long t1 = System.currentTimeMillis();
-        ArrayList<BidRequestLoadWorker> bidRequestLoadWorkers = new ArrayList<BidRequestLoadWorker>();
+        long total = 0, start = System.currentTimeMillis();
+        ArrayList<BidRequestLoadWorker> workers = new ArrayList<BidRequestLoadWorker>();
 
         for (int i=0; i<WORKERS_NO ; i++) {
-            BidRequestLoadWorker w = new BidRequestLoadWorker(WORKER_MESSAGES);
-            bidRequestLoadWorkers.add(w);
+            BidRequestLoadWorker w = new BidRequestLoadWorker(WORKER_TIME);
+            workers.add(w);
             w.start();
         }
-        for (BidRequestLoadWorker w : bidRequestLoadWorkers) {
+        for (BidRequestLoadWorker w : workers) {
             try {
                 w.join();
+                total += w.getMsgs();
+                System.out.println(w.getMsgs());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
-        System.out.println(WORKERS_NO*WORKER_MESSAGES+" messages processed in "+(System.currentTimeMillis()-t1)+" miliseconds");
-        long t2 = System.currentTimeMillis()-t1;
-        long msgs = WORKERS_NO*WORKER_MESSAGES;
-        float speed = msgs/(float)t2*1000;
-
+        long duration = System.currentTimeMillis()-start;
+        float speed = total/(float)duration*1000;
         System.out.println(String.format("%,.1f msg/s", speed));
     }
 }

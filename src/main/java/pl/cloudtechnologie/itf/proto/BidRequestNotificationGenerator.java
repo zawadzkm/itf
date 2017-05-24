@@ -1,6 +1,5 @@
 package pl.cloudtechnologie.itf.proto;
 
-import pl.cloudtechnologie.itf.proto.CtProtos.BidRequestNotification;
 import java.util.Random;
 
 public class BidRequestNotificationGenerator {
@@ -19,9 +18,9 @@ public class BidRequestNotificationGenerator {
         random = new Random(System.currentTimeMillis());
     }
 
-    public BidRequestNotification nextMsg() {
+    public CtProtos.BidRequestNotification nextMsg() {
 
-        return BidRequestNotification.newBuilder()
+        return CtProtos.BidRequestNotification.newBuilder()
                 .setUserId(random.nextInt(USER_ID_MAX - USER_ID_MIN) + USER_ID_MIN)
                 .setHostHash(random.nextInt(HOST_HASH_MAX - HOST_HASH_MIN) + HOST_HASH_MIN)
                 .setUserAgent(random.nextInt(USER_AGENT_MAX - USER_AGENT_MIN) + USER_AGENT_MIN)

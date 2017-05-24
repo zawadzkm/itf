@@ -5,6 +5,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationGenerator;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationSerializer;
+import pl.cloudtechnologie.itf.proto.CtProtos;
 
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
