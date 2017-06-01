@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class AvroBidRequestNotificationDeserializer {
 
-    public AvroBidRequestNotification deserialize(final String topic, byte[] data) throws IOException {
+    public AvroBidRequestNotification deserialize(byte[] data) throws IOException {
         SpecificDatumReader<AvroBidRequestNotification> reader = new SpecificDatumReader<AvroBidRequestNotification>(AvroBidRequestNotification.getClassSchema());
         Decoder decoder = DecoderFactory.get().binaryDecoder(data, null);
         return reader.read(null, decoder);

@@ -11,8 +11,7 @@ public class ThriftBidRequestNotificationSerializer {
         serializer = new TSerializer(new TBinaryProtocol.Factory());
     }
 
-    public byte[] serialize(final String topic, final ThriftBidRequestNotification data) throws TException {
-
+    public byte[] serialize(final ThriftBidRequestNotification data) throws TException {
        return serializer.serialize(data);
     }
 }

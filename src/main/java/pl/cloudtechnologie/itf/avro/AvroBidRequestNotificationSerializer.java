@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class AvroBidRequestNotificationSerializer {
 
-    public byte[] serialize(final String topic, final AvroBidRequestNotification data) throws IOException {
+    public byte[] serialize(final AvroBidRequestNotification data) throws IOException {
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         BinaryEncoder encoder = EncoderFactory.get().binaryEncoder(out, null);

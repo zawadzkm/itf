@@ -10,7 +10,7 @@ public class ThriftBidRequestNotificationDeserializer {
     public ThriftBidRequestNotificationDeserializer() {
         deserializer = new TDeserializer(new TBinaryProtocol.Factory());
     }
-    public ThriftBidRequestNotification deserialize(final String topic, byte[] data) throws TException {
+    public ThriftBidRequestNotification deserialize(byte[] data) throws TException {
         ThriftBidRequestNotification msg = new ThriftBidRequestNotification();
         deserializer.deserialize(msg, data);
         return msg;
