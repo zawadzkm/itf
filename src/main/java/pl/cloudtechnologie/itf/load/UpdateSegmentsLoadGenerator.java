@@ -5,14 +5,14 @@ import org.apache.flink.api.java.utils.ParameterTool;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class GenerateBidRequestLoad {
+public class UpdateSegmentsLoadGenerator {
 
     private ParameterTool parameter;
     public static String PROPERTIES_PATH = "itf.properties";
 
     public static void main(String[] args) {
         try {
-            GenerateBidRequestLoad load = new GenerateBidRequestLoad();
+            UpdateSegmentsLoadGenerator load = new UpdateSegmentsLoadGenerator();
             load.getProperties();
             load.run();
         } catch (IOException e) {
@@ -28,17 +28,17 @@ public class GenerateBidRequestLoad {
     public void run() throws IOException {
 
         long total = 0, start = System.currentTimeMillis();
-        ArrayList<BidRequestLoadWorker> workers = new ArrayList<BidRequestLoadWorker>();
+        ArrayList<UpdateSegmentsLoadWorker> workers = new ArrayList<UpdateSegmentsLoadWorker>();
 
-        int workers_no = parameter.getInt("itf.test.requestload.workers_no");
-        int workers_time = parameter.getInt("itf.test.requestload.time");
+        int workers_no = parameter.getInt("itf.test.updateload.workers_no");
+        int workers_time = parameter.getInt("itf.test.updateload.time");
 
         for (int i=0; i<workers_no; i++) {
-            BidRequestLoadWorker w = new BidRequestLoadWorker(workers_time);
+            UpdateSegmentsLoadWorker w = new UpdateSegmentsLoadWorker(workers_time);
             workers.add(w);
             w.start();
         }
-        for (BidRequestLoadWorker w : workers) {
+        for (UpdateSegmentsLoadWorker w : workers) {
             try {
                 w.join();
                 total += w.getMessages();

@@ -6,7 +6,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationGenerator;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationSerializer;
-import pl.cloudtechnologie.itf.proto.CtProtos;
+import pl.cloudtechnologie.itf.proto.CtProtos.BidRequestNotification;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -20,10 +20,10 @@ public class BidRequestLoadWorker extends Thread {
     private volatile int messages = 0;
 
     private BidRequestNotificationGenerator generator;
-    private KafkaProducer<Integer, CtProtos.BidRequestNotification> producer;
+    private KafkaProducer<Integer, BidRequestNotification> producer;
 
     public BidRequestLoadWorker(int time) throws IOException {
-        parameter = ParameterTool.fromPropertiesFile(GenerateBidRequestLoad.PROPERTIES_PATH);
+        parameter = ParameterTool.fromPropertiesFile(BidRequestLoadGenerator.PROPERTIES_PATH);
 
         duration = time;
         generator = new BidRequestNotificationGenerator();
@@ -45,8 +45,8 @@ public class BidRequestLoadWorker extends Thread {
         long start = System.currentTimeMillis();
 
         while (System.currentTimeMillis() - start < duration) {
-            messages = messages+1;
             producer.send(new ProducerRecord(parameter.get("itf.topTopic"), generator.nextMsg()));
+            messages = messages+1;
         }
 
         producer.flush();

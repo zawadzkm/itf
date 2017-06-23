@@ -1261,6 +1261,1434 @@ public final class CtProtos {
     // @@protoc_insertion_point(class_scope:pl.cloudtechnologie.itf.proto.CalculateSegments)
   }
 
+  public interface PartnerUserIdOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 partner_id = 1;
+    /**
+     * <code>required int32 partner_id = 1;</code>
+     */
+    boolean hasPartnerId();
+    /**
+     * <code>required int32 partner_id = 1;</code>
+     */
+    int getPartnerId();
+
+    // required int32 usr_id = 2;
+    /**
+     * <code>required int32 usr_id = 2;</code>
+     */
+    boolean hasUsrId();
+    /**
+     * <code>required int32 usr_id = 2;</code>
+     */
+    int getUsrId();
+  }
+  /**
+   * Protobuf type {@code pl.cloudtechnologie.itf.proto.PartnerUserId}
+   */
+  public static final class PartnerUserId extends
+      com.google.protobuf.GeneratedMessage
+      implements PartnerUserIdOrBuilder {
+    // Use PartnerUserId.newBuilder() to construct.
+    private PartnerUserId(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private PartnerUserId(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final PartnerUserId defaultInstance;
+    public static PartnerUserId getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public PartnerUserId getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerUserId(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              partnerId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              usrId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.class, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<PartnerUserId> PARSER =
+        new com.google.protobuf.AbstractParser<PartnerUserId>() {
+      public PartnerUserId parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerUserId(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerUserId> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 partner_id = 1;
+    public static final int PARTNER_ID_FIELD_NUMBER = 1;
+    private int partnerId_;
+    /**
+     * <code>required int32 partner_id = 1;</code>
+     */
+    public boolean hasPartnerId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 partner_id = 1;</code>
+     */
+    public int getPartnerId() {
+      return partnerId_;
+    }
+
+    // required int32 usr_id = 2;
+    public static final int USR_ID_FIELD_NUMBER = 2;
+    private int usrId_;
+    /**
+     * <code>required int32 usr_id = 2;</code>
+     */
+    public boolean hasUsrId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 usr_id = 2;</code>
+     */
+    public int getUsrId() {
+      return usrId_;
+    }
+
+    private void initFields() {
+      partnerId_ = 0;
+      usrId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasPartnerId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasUsrId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, partnerId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, usrId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, partnerId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, usrId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pl.cloudtechnologie.itf.proto.PartnerUserId}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.class, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder.class);
+      }
+
+      // Construct using pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        partnerId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        usrId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_descriptor;
+      }
+
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId getDefaultInstanceForType() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.getDefaultInstance();
+      }
+
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId build() {
+        pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId buildPartial() {
+        pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId result = new pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.partnerId_ = partnerId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.usrId_ = usrId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId) {
+          return mergeFrom((pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId other) {
+        if (other == pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.getDefaultInstance()) return this;
+        if (other.hasPartnerId()) {
+          setPartnerId(other.getPartnerId());
+        }
+        if (other.hasUsrId()) {
+          setUsrId(other.getUsrId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasPartnerId()) {
+          
+          return false;
+        }
+        if (!hasUsrId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 partner_id = 1;
+      private int partnerId_ ;
+      /**
+       * <code>required int32 partner_id = 1;</code>
+       */
+      public boolean hasPartnerId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 partner_id = 1;</code>
+       */
+      public int getPartnerId() {
+        return partnerId_;
+      }
+      /**
+       * <code>required int32 partner_id = 1;</code>
+       */
+      public Builder setPartnerId(int value) {
+        bitField0_ |= 0x00000001;
+        partnerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 partner_id = 1;</code>
+       */
+      public Builder clearPartnerId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        partnerId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 usr_id = 2;
+      private int usrId_ ;
+      /**
+       * <code>required int32 usr_id = 2;</code>
+       */
+      public boolean hasUsrId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 usr_id = 2;</code>
+       */
+      public int getUsrId() {
+        return usrId_;
+      }
+      /**
+       * <code>required int32 usr_id = 2;</code>
+       */
+      public Builder setUsrId(int value) {
+        bitField0_ |= 0x00000002;
+        usrId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 usr_id = 2;</code>
+       */
+      public Builder clearUsrId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        usrId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:pl.cloudtechnologie.itf.proto.PartnerUserId)
+    }
+
+    static {
+      defaultInstance = new PartnerUserId(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:pl.cloudtechnologie.itf.proto.PartnerUserId)
+  }
+
+  public interface UpdateSegmentsOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int64 user_id = 1;
+    /**
+     * <code>required int64 user_id = 1;</code>
+     */
+    boolean hasUserId();
+    /**
+     * <code>required int64 user_id = 1;</code>
+     */
+    long getUserId();
+
+    // repeated int32 segments = 2;
+    /**
+     * <code>repeated int32 segments = 2;</code>
+     */
+    java.util.List<java.lang.Integer> getSegmentsList();
+    /**
+     * <code>repeated int32 segments = 2;</code>
+     */
+    int getSegmentsCount();
+    /**
+     * <code>repeated int32 segments = 2;</code>
+     */
+    int getSegments(int index);
+
+    // repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    java.util.List<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId> 
+        getPartnerUserIdsList();
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId getPartnerUserIds(int index);
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    int getPartnerUserIdsCount();
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    java.util.List<? extends pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder> 
+        getPartnerUserIdsOrBuilderList();
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder getPartnerUserIdsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pl.cloudtechnologie.itf.proto.UpdateSegments}
+   */
+  public static final class UpdateSegments extends
+      com.google.protobuf.GeneratedMessage
+      implements UpdateSegmentsOrBuilder {
+    // Use UpdateSegments.newBuilder() to construct.
+    private UpdateSegments(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private UpdateSegments(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final UpdateSegments defaultInstance;
+    public static UpdateSegments getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public UpdateSegments getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateSegments(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userId_ = input.readInt64();
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                segments_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              segments_.add(input.readInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                segments_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                segments_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                partnerUserIds_ = new java.util.ArrayList<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              partnerUserIds_.add(input.readMessage(pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          segments_ = java.util.Collections.unmodifiableList(segments_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          partnerUserIds_ = java.util.Collections.unmodifiableList(partnerUserIds_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments.class, pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<UpdateSegments> PARSER =
+        new com.google.protobuf.AbstractParser<UpdateSegments>() {
+      public UpdateSegments parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateSegments(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateSegments> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int64 user_id = 1;
+    public static final int USER_ID_FIELD_NUMBER = 1;
+    private long userId_;
+    /**
+     * <code>required int64 user_id = 1;</code>
+     */
+    public boolean hasUserId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int64 user_id = 1;</code>
+     */
+    public long getUserId() {
+      return userId_;
+    }
+
+    // repeated int32 segments = 2;
+    public static final int SEGMENTS_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> segments_;
+    /**
+     * <code>repeated int32 segments = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getSegmentsList() {
+      return segments_;
+    }
+    /**
+     * <code>repeated int32 segments = 2;</code>
+     */
+    public int getSegmentsCount() {
+      return segments_.size();
+    }
+    /**
+     * <code>repeated int32 segments = 2;</code>
+     */
+    public int getSegments(int index) {
+      return segments_.get(index);
+    }
+
+    // repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;
+    public static final int PARTNERUSERIDS_FIELD_NUMBER = 3;
+    private java.util.List<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId> partnerUserIds_;
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    public java.util.List<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId> getPartnerUserIdsList() {
+      return partnerUserIds_;
+    }
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    public java.util.List<? extends pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder> 
+        getPartnerUserIdsOrBuilderList() {
+      return partnerUserIds_;
+    }
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    public int getPartnerUserIdsCount() {
+      return partnerUserIds_.size();
+    }
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId getPartnerUserIds(int index) {
+      return partnerUserIds_.get(index);
+    }
+    /**
+     * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+     */
+    public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder getPartnerUserIdsOrBuilder(
+        int index) {
+      return partnerUserIds_.get(index);
+    }
+
+    private void initFields() {
+      userId_ = 0L;
+      segments_ = java.util.Collections.emptyList();
+      partnerUserIds_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getPartnerUserIdsCount(); i++) {
+        if (!getPartnerUserIds(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, userId_);
+      }
+      for (int i = 0; i < segments_.size(); i++) {
+        output.writeInt32(2, segments_.get(i));
+      }
+      for (int i = 0; i < partnerUserIds_.size(); i++) {
+        output.writeMessage(3, partnerUserIds_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, userId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < segments_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(segments_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getSegmentsList().size();
+      }
+      for (int i = 0; i < partnerUserIds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, partnerUserIds_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pl.cloudtechnologie.itf.proto.UpdateSegments}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegmentsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments.class, pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments.Builder.class);
+      }
+
+      // Construct using pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPartnerUserIdsFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        segments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (partnerUserIdsBuilder_ == null) {
+          partnerUserIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          partnerUserIdsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_descriptor;
+      }
+
+      public pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments getDefaultInstanceForType() {
+        return pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments.getDefaultInstance();
+      }
+
+      public pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments build() {
+        pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments buildPartial() {
+        pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments result = new pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userId_ = userId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          segments_ = java.util.Collections.unmodifiableList(segments_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.segments_ = segments_;
+        if (partnerUserIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            partnerUserIds_ = java.util.Collections.unmodifiableList(partnerUserIds_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.partnerUserIds_ = partnerUserIds_;
+        } else {
+          result.partnerUserIds_ = partnerUserIdsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments) {
+          return mergeFrom((pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments other) {
+        if (other == pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments.getDefaultInstance()) return this;
+        if (other.hasUserId()) {
+          setUserId(other.getUserId());
+        }
+        if (!other.segments_.isEmpty()) {
+          if (segments_.isEmpty()) {
+            segments_ = other.segments_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSegmentsIsMutable();
+            segments_.addAll(other.segments_);
+          }
+          onChanged();
+        }
+        if (partnerUserIdsBuilder_ == null) {
+          if (!other.partnerUserIds_.isEmpty()) {
+            if (partnerUserIds_.isEmpty()) {
+              partnerUserIds_ = other.partnerUserIds_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePartnerUserIdsIsMutable();
+              partnerUserIds_.addAll(other.partnerUserIds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.partnerUserIds_.isEmpty()) {
+            if (partnerUserIdsBuilder_.isEmpty()) {
+              partnerUserIdsBuilder_.dispose();
+              partnerUserIdsBuilder_ = null;
+              partnerUserIds_ = other.partnerUserIds_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              partnerUserIdsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPartnerUserIdsFieldBuilder() : null;
+            } else {
+              partnerUserIdsBuilder_.addAllMessages(other.partnerUserIds_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserId()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getPartnerUserIdsCount(); i++) {
+          if (!getPartnerUserIds(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (pl.cloudtechnologie.itf.proto.CtProtos.UpdateSegments) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int64 user_id = 1;
+      private long userId_ ;
+      /**
+       * <code>required int64 user_id = 1;</code>
+       */
+      public boolean hasUserId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int64 user_id = 1;</code>
+       */
+      public long getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>required int64 user_id = 1;</code>
+       */
+      public Builder setUserId(long value) {
+        bitField0_ |= 0x00000001;
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int64 user_id = 1;</code>
+       */
+      public Builder clearUserId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      // repeated int32 segments = 2;
+      private java.util.List<java.lang.Integer> segments_ = java.util.Collections.emptyList();
+      private void ensureSegmentsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          segments_ = new java.util.ArrayList<java.lang.Integer>(segments_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 segments = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getSegmentsList() {
+        return java.util.Collections.unmodifiableList(segments_);
+      }
+      /**
+       * <code>repeated int32 segments = 2;</code>
+       */
+      public int getSegmentsCount() {
+        return segments_.size();
+      }
+      /**
+       * <code>repeated int32 segments = 2;</code>
+       */
+      public int getSegments(int index) {
+        return segments_.get(index);
+      }
+      /**
+       * <code>repeated int32 segments = 2;</code>
+       */
+      public Builder setSegments(
+          int index, int value) {
+        ensureSegmentsIsMutable();
+        segments_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 segments = 2;</code>
+       */
+      public Builder addSegments(int value) {
+        ensureSegmentsIsMutable();
+        segments_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 segments = 2;</code>
+       */
+      public Builder addAllSegments(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureSegmentsIsMutable();
+        super.addAll(values, segments_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 segments = 2;</code>
+       */
+      public Builder clearSegments() {
+        segments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      // repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;
+      private java.util.List<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId> partnerUserIds_ =
+        java.util.Collections.emptyList();
+      private void ensurePartnerUserIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          partnerUserIds_ = new java.util.ArrayList<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId>(partnerUserIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder> partnerUserIdsBuilder_;
+
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public java.util.List<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId> getPartnerUserIdsList() {
+        if (partnerUserIdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(partnerUserIds_);
+        } else {
+          return partnerUserIdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public int getPartnerUserIdsCount() {
+        if (partnerUserIdsBuilder_ == null) {
+          return partnerUserIds_.size();
+        } else {
+          return partnerUserIdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId getPartnerUserIds(int index) {
+        if (partnerUserIdsBuilder_ == null) {
+          return partnerUserIds_.get(index);
+        } else {
+          return partnerUserIdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder setPartnerUserIds(
+          int index, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId value) {
+        if (partnerUserIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartnerUserIdsIsMutable();
+          partnerUserIds_.set(index, value);
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder setPartnerUserIds(
+          int index, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder builderForValue) {
+        if (partnerUserIdsBuilder_ == null) {
+          ensurePartnerUserIdsIsMutable();
+          partnerUserIds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder addPartnerUserIds(pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId value) {
+        if (partnerUserIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartnerUserIdsIsMutable();
+          partnerUserIds_.add(value);
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder addPartnerUserIds(
+          int index, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId value) {
+        if (partnerUserIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartnerUserIdsIsMutable();
+          partnerUserIds_.add(index, value);
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder addPartnerUserIds(
+          pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder builderForValue) {
+        if (partnerUserIdsBuilder_ == null) {
+          ensurePartnerUserIdsIsMutable();
+          partnerUserIds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder addPartnerUserIds(
+          int index, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder builderForValue) {
+        if (partnerUserIdsBuilder_ == null) {
+          ensurePartnerUserIdsIsMutable();
+          partnerUserIds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder addAllPartnerUserIds(
+          java.lang.Iterable<? extends pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId> values) {
+        if (partnerUserIdsBuilder_ == null) {
+          ensurePartnerUserIdsIsMutable();
+          super.addAll(values, partnerUserIds_);
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder clearPartnerUserIds() {
+        if (partnerUserIdsBuilder_ == null) {
+          partnerUserIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public Builder removePartnerUserIds(int index) {
+        if (partnerUserIdsBuilder_ == null) {
+          ensurePartnerUserIdsIsMutable();
+          partnerUserIds_.remove(index);
+          onChanged();
+        } else {
+          partnerUserIdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder getPartnerUserIdsBuilder(
+          int index) {
+        return getPartnerUserIdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder getPartnerUserIdsOrBuilder(
+          int index) {
+        if (partnerUserIdsBuilder_ == null) {
+          return partnerUserIds_.get(index);  } else {
+          return partnerUserIdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public java.util.List<? extends pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder> 
+           getPartnerUserIdsOrBuilderList() {
+        if (partnerUserIdsBuilder_ != null) {
+          return partnerUserIdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(partnerUserIds_);
+        }
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder addPartnerUserIdsBuilder() {
+        return getPartnerUserIdsFieldBuilder().addBuilder(
+            pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder addPartnerUserIdsBuilder(
+          int index) {
+        return getPartnerUserIdsFieldBuilder().addBuilder(
+            index, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pl.cloudtechnologie.itf.proto.PartnerUserId partnerUserIds = 3;</code>
+       */
+      public java.util.List<pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder> 
+           getPartnerUserIdsBuilderList() {
+        return getPartnerUserIdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder> 
+          getPartnerUserIdsFieldBuilder() {
+        if (partnerUserIdsBuilder_ == null) {
+          partnerUserIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserId.Builder, pl.cloudtechnologie.itf.proto.CtProtos.PartnerUserIdOrBuilder>(
+                  partnerUserIds_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          partnerUserIds_ = null;
+        }
+        return partnerUserIdsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:pl.cloudtechnologie.itf.proto.UpdateSegments)
+    }
+
+    static {
+      defaultInstance = new UpdateSegments(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:pl.cloudtechnologie.itf.proto.UpdateSegments)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_pl_cloudtechnologie_itf_proto_BidRequestNotification_descriptor;
   private static
@@ -1271,6 +2699,16 @@ public final class CtProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_pl_cloudtechnologie_itf_proto_CalculateSegments_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1285,9 +2723,13 @@ public final class CtProtos {
       "cation\022\017\n\007user_id\030\001 \002(\003\022\021\n\thost_hash\030\002 \002" +
       "(\003\022\022\n\nuser_agent\030\003 \002(\005\022\022\n\nip_address\030\004 \002" +
       "(\005\022\021\n\ttimestamp\030\005 \002(\003\"7\n\021CalculateSegmen" +
-      "ts\022\017\n\007user_id\030\001 \002(\003\022\021\n\tmsg_count\030\002 \002(\003B)" +
-      "\n\035pl.cloudtechnologie.itf.protoB\010CtProto" +
-      "s"
+      "ts\022\017\n\007user_id\030\001 \002(\003\022\021\n\tmsg_count\030\002 \002(\003\"3" +
+      "\n\rPartnerUserId\022\022\n\npartner_id\030\001 \002(\005\022\016\n\006u" +
+      "sr_id\030\002 \002(\005\"y\n\016UpdateSegments\022\017\n\007user_id" +
+      "\030\001 \002(\003\022\020\n\010segments\030\002 \003(\005\022D\n\016partnerUserI" +
+      "ds\030\003 \003(\0132,.pl.cloudtechnologie.itf.proto",
+      ".PartnerUserIdB)\n\035pl.cloudtechnologie.it" +
+      "f.protoB\010CtProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1306,6 +2748,18 @@ public final class CtProtos {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_pl_cloudtechnologie_itf_proto_CalculateSegments_descriptor,
               new java.lang.String[] { "UserId", "MsgCount", });
+          internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_pl_cloudtechnologie_itf_proto_PartnerUserId_descriptor,
+              new java.lang.String[] { "PartnerId", "UsrId", });
+          internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_pl_cloudtechnologie_itf_proto_UpdateSegments_descriptor,
+              new java.lang.String[] { "UserId", "Segments", "PartnerUserIds", });
           return null;
         }
       };

@@ -9,7 +9,7 @@ import pl.cloudtechnologie.itf.avro.AvroBidRequestNotificationSerializer;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationDeserializer;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationGenerator;
 import pl.cloudtechnologie.itf.proto.BidRequestNotificationSerializer;
-import pl.cloudtechnologie.itf.proto.CtProtos;
+import pl.cloudtechnologie.itf.proto.CtProtos.BidRequestNotification;
 import pl.cloudtechnologie.itf.thrift.ThriftBidRequestNotification;
 import pl.cloudtechnologie.itf.thrift.ThriftBidRequestNotificationDeserializer;
 import pl.cloudtechnologie.itf.thrift.ThriftBidRequestNotificationGenerator;
@@ -19,7 +19,6 @@ import java.io.IOException;
 
 public class SerializationPerformanceTest {
     private static long MSG_COUNT = 10000000;
-
 
     public static void main(String[] args) {
         SerializationPerformanceTest test = new SerializationPerformanceTest();
@@ -44,7 +43,7 @@ public class SerializationPerformanceTest {
         BidRequestNotificationGenerator gen = new BidRequestNotificationGenerator();
         BidRequestNotificationSerializer serializer = new BidRequestNotificationSerializer();
         BidRequestNotificationDeserializer deserializer = new BidRequestNotificationDeserializer();
-        CtProtos.BidRequestNotification msg1;
+        BidRequestNotification msg1;
         byte[] bytes;
 
         long start = System.currentTimeMillis();

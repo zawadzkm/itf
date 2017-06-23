@@ -1,7 +1,6 @@
 package pl.cloudtechnologie.itf.proto;
 
 import org.apache.kafka.common.serialization.Serializer;
-
 import java.util.Map;
 
 public class BidRequestNotificationSerializer implements Serializer<CtProtos.BidRequestNotification> {

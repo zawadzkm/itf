@@ -17,3 +17,14 @@ message CalculateSegments {
     required int64 user_id = 1;
     required int64 msg_count = 2;
 }
+
+message PartnerUserId {
+    required int32 partner_id = 1;
+    required int32 usr_id = 2;
+}
+
+message UpdateSegments {
+    required int64 user_id = 1;
+    repeated int32 segments = 2;
+    repeated PartnerUserId partnerUserIds = 3;
+}

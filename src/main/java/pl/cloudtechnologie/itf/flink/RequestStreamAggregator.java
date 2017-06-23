@@ -8,7 +8,6 @@ import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTime
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer010;
-import pl.cloudtechnologie.itf.load.GenerateBidRequestLoad;
 import pl.cloudtechnologie.itf.proto.CtProtos.CalculateSegments;
 import pl.cloudtechnologie.itf.proto.CtProtos.BidRequestNotification;
 
